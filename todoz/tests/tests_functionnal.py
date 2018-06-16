@@ -26,4 +26,5 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 
         # Chloe has a sharp eye and notice the title !
-        self.assertIn('Django', self.browser.title)
+        #self.assertIn('Django', self.browser.title)
+        self.assertIn('ToDoz', self.browser.title)

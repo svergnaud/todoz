@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include, url
+#from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'', include('task.urls')),
+    # url(r'^posts/$', views.all_blog_entries),
+    # url(r'^posts/year/([0-9]{4})/$', views.blog_entries_by_year),
+    # url(r'^posts/year/([0-9]{4})/month/([0-9]{2})/$', views.blog_entries_by_month),
+    # url(r'^posts/detail/(?P<pk>\d+)/$', views.blog_entry_detail),
 ]
